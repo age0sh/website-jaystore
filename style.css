@@ -1,0 +1,58 @@
+/* Estilos generales */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #fcf3e5;
+    padding-top: 100px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 800px;
+    height: 80px;
+    display: block;
+    padding-left: 30px;
+}
+
+/* Estilos para el icono de hamburguesa */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* Ocultar las opciones del navbar por defecto en pantallas pequeñas */
+#MenuItems {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin-right: 50px;
+}
+
+#MenuItems li {
+    margin: 0 10px;
+}
+
+#MenuItems a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'DIN 2014', sans-serif;
+}
+
+#MenuItems a:hover {
+    color: white;
+}
