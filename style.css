@@ -1,58 +1,265 @@
-/* Estilos generales */
 body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background-color: #b4dbdb ;
+    background-color: lightgray;
     padding-top: 100px;
 }
 
 .navbar {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000;
-    background-color:  #54636c ;
+    background-color: white;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing: border-box; /* Evita desbordamientos */
 }
 
-.logo img {
-    max-width: 800px;
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajustar el tamaño del logo */
+.logo-container img {
+    width: 80px;
     height: 80px;
-    display: block;
-    padding-left: 30px;
 }
 
-/* Estilos para el icono de hamburguesa */
-.menu-icon {
-    display: none;
-    cursor: pointer;
+.menu-container {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    max-width: 70%; /* Limita el ancho del menú para evitar que se salga */
 }
 
-/* Ocultar las opciones del navbar por defecto en pantallas pequeñas */
 #MenuItems {
     display: flex;
-    gap: 1rem;
     list-style: none;
-    margin-right: 50px;
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* Reduce el espacio para acomodar mejor */
+    flex-wrap: wrap; /* Evita que los elementos se salgan en pantallas pequeñas */
 }
 
 #MenuItems li {
-    margin: 0 10px;
+    margin: 0;
 }
 
 #MenuItems a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
-    font-family: 'DIN 2014', sans-serif;
+    font-size: 16px; /* Reduce el tamaño si es necesario */
+    font-family: 'Arapey', serif;
+    white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */
 }
 
 #MenuItems a:hover {
+    color: gray;
+}
+
+
+.banner img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 450px; /* Limita la altura máxima del banner */
+    object-fit: cover; /* Cubre el área del banner sin distorsionar la imagen */
+}
+
+
+.Destacados {
+    text-align: center; /* Opcional: Centra el título "Destacados" */
+    margin-bottom: 20px; /* Opcional: Espacio inferior */
+    margin-top: 150px;
+  }
+
+.Destacados h1 {
+    font-size: 24px; /* Tamaño del título "Destacados" */
+    margin-bottom: 50px; /* Espacio inferior */
+    font-family: 'Nixie One', serif;
+  }
+  
+  .collage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los productos al inicio para que los textos se vean bien */
+    gap: 50px; /* Aumenta el espacio entre los productos */
+}
+
+.producto {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos dentro del producto en columna */
+    align-items: center; /* Centra horizontalmente el contenido del producto */
+    text-align: center; /* Centra el texto dentro del producto */
+    background-color: white;
+    padding-bottom: 20px; /* Espacio inferior */
+    border-radius: 10px; /* Bordes redondeados */
+    
+}
+
+.producto a {
+    display: block; /* Asegura que el enlace ocupe el ancho */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.producto img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.collage .producto a:hover img {
+    transform: scale(0.9); /* Escala la imagen dentro del contenedor */
+    transition: transform 0.5s ease; /* Transición suave al escalar */
+}
+
+.producto h3 {
+    font-size: 1.2em; /* Tamaño del nombre del reloj */
+    margin-top: 10px; /* Espacio superior */
+    margin-bottom: 5px; /* Espacio inferior */
+    font-family: 'Nixie One', serif;
+}
+
+.nombre-reloj {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.precio-reloj {
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.ordenar-reloj {
+    background-color: gray; /* Un color azul atractivo */
     color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.ordenar-reloj:hover {
+    background-color: black; /* Un tono de azul más oscuro al pasar el ratón */
+}
+
+.footer {
+    background: white;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+.footer h4 {
+    color: black;
+    font-family: 'Arapey', serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer_links li {
+    display: inline-block;
+    margin: 10px 20px; /* Espaciado horizontal entre elementos */
+    font-family: 'Playfair Display', serif;
+}
+.footer_links a {
+    color: black;
+    text-decoration: none;
+}
+.footer_links a:hover {
+    color: gray;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer hr {
+    border: 0;
+    border-top: 1px solid black;
+}
+.footer_links {
+    margin-bottom: 20px;
+}
+
+
+.contacto h1 {
+    font-family: 'Nixie One', serif;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    font-family: 'Arapey', serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+.icon_redes {
+    display: auto;
+    text-align: center;
+}
+
+.icon_redes a {
+    font-size: 90px;
+    color: black;
+    margin: 10px; /* Añade margen vertical entre los iconos */
+    text-decoration: none;
+}
+
+.icon_redes p {
+    font-family: 'Nixie One', serif;
+    font-size: 20px;
+    color: black;
+    margin: 10px;
+}
+
+.icon_redes a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* RESPONSIVE: Ajustes para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .menu-container {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        max-width: 100%;
+        justify-content: center; /* En pantallas pequeñas, centrar el menú */
+    }
+    
+    #MenuItems {
+        flex-direction: column; /* Apilar los elementos en pantallas pequeñas */
+        align-items: center;
+    }
 }
