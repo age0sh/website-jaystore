@@ -44,6 +44,7 @@ body {
     margin: 0;
     gap: 20px; /* Reduce el espacio para acomodar mejor */
     flex-wrap: wrap; /* Evita que los elementos se salgan en pantallas pequeñas */
+    margin-right: 50px;
 }
 
 #MenuItems li {
@@ -90,6 +91,8 @@ body {
     gap: 50px; /* Aumenta el espacio entre los productos */
 }
 
+
+
 .producto {
     display: flex;
     flex-direction: column; /* Organiza los elementos dentro del producto en columna */
@@ -98,6 +101,8 @@ body {
     background-color: white;
     padding-bottom: 20px; /* Espacio inferior */
     border-radius: 10px; /* Bordes redondeados */
+    margin-top: 20px;
+    margin-bottom: 20px;
     
 }
 
@@ -240,26 +245,188 @@ ul {
     cursor: pointer;
 }
 
-
-
-
-
-
-/* RESPONSIVE: Ajustes para pantallas más pequeñas */
-@media (max-width: 1024px) {
-    .menu-container {
-        max-width: 60%;
-    }
+.politica-devoluciones {
+    font-family: 'Arapey', serif;
+    font-size: 18px;
+    color: black;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
 }
 
-@media (max-width: 768px) {
-    .menu-container {
-        max-width: 100%;
-        justify-content: center; /* En pantallas pequeñas, centrar el menú */
+.politica-devoluciones h1, h2, h3 {
+    font-family: 'Nixie One', serif;
+    font-size: 36px;
+    color: black;
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.politica-privacidad {
+    font-family: 'Arapey', serif;
+    font-size: 18px;
+    color: black;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.politica-privacidad h1, h2, h3 {
+    font-family: 'Nixie One', serif;
+    font-size: 36px;
+    color: black;
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.terminos-condiciones {
+    font-family: 'Arapey', serif;
+    font-size: 18px;
+    color: black;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.terminos-condiciones h1, h2, h3 {
+    font-family: 'Nixie One', serif;
+    font-size: 36px;
+    color: black;
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.relojes h1 {
+    font-family: 'Nixie One', serif;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.imagen-placeholder {
+    width: 250px; /* El mismo ancho que las imágenes */
+    height: 250px; /* La misma altura que las imágenes */
+    background-color: #f0f0f0; /* Un color gris claro como placeholder */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #ccc;
+    margin-bottom: 10px; /* Espacio debajo del placeholder */
+}
+
+.imagen-placeholder a {
+    display: block; /* Asegura que el enlace ocupe todo el espacio del placeholder */
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    /* Inicialmente la imagen se muestra */
+}
+
+
+/* Estilos para pantallas más pequeñas (móviles) */
+@media (max-width: 1150px) {
+    body {
+        padding-top: 60px; /* Reduce el padding superior para que no haya tanto espacio en blanco */
     }
-    
+
+    .navbar {
+        flex-direction: column; /* Apila el logo y el menú verticalmente */
+        align-items: center; /* Centra los elementos */
+        padding: 10px; /* Reduce el padding del navbar */
+    }
+
+    .logo-container {
+        margin-bottom: 10px; /* Espacio entre el logo y el menú */
+    }
+
+    .menu-container {
+        max-width: 100%; /* El menú ocupa todo el ancho */
+        justify-content: center; /* Centra el menú */
+    }
+
     #MenuItems {
-        flex-direction: column; /* Apilar los elementos en pantallas pequeñas */
-        align-items: center;
+        flex-direction: column; /* Apila los items del menú verticalmente */
+        align-items: center; /* Centra los items del menú */
+        gap: 10px; /* Reduce el espacio entre los items del menú */
+    }
+
+    #MenuItems li {
+        width: 100%; /* Los items del menú ocupan todo el ancho */
+        text-align: center; /* Centra el texto de los enlaces del menú */
+    }
+
+    .banner img {
+        max-height: none; /* Permite que la altura se ajuste al contenido */
+        margin-top: 130px; /* Añade un margen superior para separar el banner del navbar */
+    }
+
+    .Destacados {
+        margin-top: 60px; /* Reduce el margen superior */
+    }
+
+    .collage {
+        flex-direction: column; /* Apila los productos verticalmente */
+        align-items: center; /* Centra los productos */
+        gap: 20px; /* Reduce el espacio entre los productos */
+    }
+
+    .producto {
+        width: 90%; /* Los productos ocupan un ancho mayor en móvil */
+        margin-bottom: 20px; /* Espacio entre productos */
+    }
+
+    .producto img {
+        width: 100%; /* La imagen del producto ocupa todo el ancho de su contenedor */
+        height: auto; /* Mantiene la proporción */
+    }
+
+    .footer {
+        text-align: center; /* Asegura que el texto del footer esté centrado */
+    }
+
+    .footer_links {
+        text-align: center; /* Centra los enlaces del footer */
+    }
+
+    .footer_links li {
+        display: block; /* Muestra los enlaces del footer en líneas separadas */
+        margin: 10px 0; /* Ajusta el margen vertical */
+    }
+
+    .contacto {
+        padding: 20px; /* Añade un poco de padding al contenedor de contacto */
+    }
+
+    .contacto p {
+        margin-left: auto; /* Centra los párrafos de contacto */
+        margin-right: auto;
+        max-width: 90%; /* Limita el ancho de los párrafos */
+    }
+
+    .icon_redes {
+        text-align: center; /* Centra los iconos de redes sociales */
+    }
+
+    .icon_redes a {
+        font-size: 70px; /* Reduce el tamaño de los iconos en móvil */
+        margin: 10px;
     }
 }
