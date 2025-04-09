@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casio MRW200 - Jay Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    main {
+        padding: 20px;
+        min-height: 80vh;
+        background-color: lightgray;
+    }
+    
+    .producto-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        gap: 30px;
+        margin: 0 auto;
+    }
+    
+    .producto-img {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .producto-img img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 12px;
+        aspect-ratio: 1/1;
+        margin-top: 110px;
+    }
+    
+    .producto-detalles {
+        width: 100%;
+    }
+    
+    .producto-detalles h1 {
+        font-family: 'Nixie One', serif;
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        color: #2a2a2a;
+    }
+    
+    .producto-detalles p.precio {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #111;
+        margin: 15px 0;
+    }
+    
+    .precio::before {
+        content: "$";
+    }
+    
+    .precio::after {
+        content: " MXN";
+        font-size: 0.6em;
+        vertical-align: super;
+        color: #666;
+    }
+    
+    .producto-detalles p.color {
+        margin-bottom: 25px;
+        font-size: 1rem;
+    }
+    
+    .btn-whatsapp {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 15px 25px;
+        background-color: #25D366;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        transition: transform 0.2s;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+    
+    .btn-whatsapp:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+        main {
+            padding: 15px;
+        }
+        
+        .producto-container {
+            gap: 20px;
+        }
+        
+        .producto-detalles h1 {
+            font-size: 1.8rem;
+        }
+        
+        .producto-detalles p.precio {
+            font-size: 1.3rem;
+        }
+        
+        .btn-whatsapp {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1rem;
+        }
+        
+        .producto-img img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 12px;
+            aspect-ratio: 1/1;
+            margin-top: 150px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .producto-img img {
+            border-radius: 8px;
+        }
+        
+        .producto-detalles h1 {
+            font-size: 1.6rem;
+        }
+        
+        .producto-detalles p.precio {
+            font-size: 1.2rem;
+        }
+        
+        .btn-whatsapp {
+            font-size: 0.95rem;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+          <a href="../index.html"><img src="../images/logo_jaystore.png" alt="Jay Store"></a>
+        </div>
+        <div class="menu-icon">
+          <i class="bi bi-list" id="menu-toggle"></i>
+        </div>
+      <ul id="MenuItems">
+        <li><a href="../caballero.html"><span>Catálogo caballero</span></a></li>
+        <li><a href="../dama.html"><span>Catálogo dama</span></a></li>
+        <li><a href="../contacto.html"><span>Contacto</span></a></li>
+      </ul>
+    </nav>
+
+    <main>
+        <div class="producto-container">
+            <div class="producto-img">
+                <img src="../images/caballero/c70.jpeg" alt="Casio MRW200">
+            </div>
+    <div class="producto-detalles">
+        <h1>Casio MRW200</h1>
+        <p class="precio">999</p>
+        <p class="color"><strong>Color:</strong> Negro, Plata</p>
+        <a class="btn-whatsapp" href="https://wa.me/5213751118891?text=Me%20interesa%20el%20reloj%20Casio MRW200%20que%20cuesta%20999%20MXN.%20%0Ahttps://tu-servidor.com/images/caballero/c70.jpeg" target="_blank">
+            Pedir por WhatsApp
+        </a>
+    </div>
+        </div>
+    </main>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer_links">
+                <h4>Enlaces útiles</h4>
+                <ul>
+                    <li><a href="../politica-devolucion.html">Política de devolución</a></li>
+                    <li><a href="../politica-privacidad.html">Política de privacidad</a></li>
+                    <li><a href="../terminos-condiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer_links">
+                <h4>Síguenos en nuestras redes sociales</h4>
+                <ul>
+                    <li><a class="bi bi-facebook" href="https://www.facebook.com/jaykicks15/"></a></li>
+                    <li><a class="bi bi-tiktok" href="https://www.tiktok.com/@jaystore15"></a></li>
+                    <li><a class="bi bi-instagram" href="https://www.instagram.com/jaystore2015"></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>Copyright 2025 by Ge0sh</p>
+    </div>
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuItems = document.getElementById('MenuItems');
+  
+    if (menuToggle && menuItems) {
+      menuToggle.addEventListener('click', () => {
+        menuItems.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
