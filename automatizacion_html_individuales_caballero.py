@@ -190,13 +190,13 @@ html_template = """
     <main>
         <div class="producto-container">
             <div class="producto-img">
-                <img src="../images/caballero/{{ imagen }}" alt="{{ nombre }}">
+                <img src="https://raw.githubusercontent.com/age0sh/website-jaystore/main/images/caballero/{{ imagen }}" alt="{{ nombre }}">
             </div>
     <div class="producto-detalles">
         <h1>{{ nombre }}</h1>
         <p class="precio">{{ precio }}</p>
         <p class="color"><strong>Color:</strong> {{ color }}</p>
-        <a class="btn-whatsapp" href="https://wa.me/5213751118891?text=Me%20interesa%20el%20reloj%20{{ nombre }}%20que%20cuesta%20{{ precio }}%20MXN.%20%0A{{ imagen_url }}" target="_blank">
+        <a class="btn-whatsapp" href="https://wa.me/5213751118891?text=Me%20interesa%20el%20reloj%20{{ nombre }}%20que%20cuesta%20{{ precio }}%20MXN.%20%0Ahttps://raw.githubusercontent.com/age0sh/website-jaystore/main/images/caballero/{{ imagen }}" target="_blank">
             Pedir por WhatsApp
         </a>
     </div>
@@ -248,7 +248,7 @@ for _, row in df.iterrows():
     color = row['color']
     id_reloj = row['id']
     imagen = f"{id_reloj}.jpeg"
-    imagen_url = f"https://tu-servidor.com/images/caballero/{imagen}"
+    imagen_url = f"https://raw.githubusercontent.com/age0sh/website-jaystore/main/images/caballero/{imagen}"
 
     html_content = template.render(
         nombre=nombre,

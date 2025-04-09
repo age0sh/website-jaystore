@@ -42,35 +42,35 @@
         <div class="collage">
             <div class="producto">
                 <div class="imagen-placeholder">
-                    <a href="caballero.html#reloj1"><img src="images/caballero/c1.jpeg" alt="Reloj 1" class="reloj-imagen" onerror="this.style.display='none'"></a>
+                    <a href="caballero html/c48.html"><img src="images/caballero/c48.jpeg" alt="Reloj 48" class="reloj-imagen" onerror="this.style.display='none'"></a>
                 </div>
-                <h3 class="nombre-reloj">Casio MTP-VC01D-5E</h3>
-                <p class="precio-reloj">MX$ XXXX</p>
-                <button class="ordenar-reloj">Ordenar</button>
+                <h3 class="nombre-reloj">Casio AQ230</h3>
+                <p class="precio-reloj">MX$ 1440</p>
+                <button class="ordenar-reloj">Ordenar por WhatsApp</button>
             </div>
             <div class="producto">
                 <div class="imagen-placeholder">
-                    <a href="caballero.html#reloj2"><img src="images/caballero/c2.jpeg" alt="Reloj 2" class="reloj-imagen" onerror="this.style.display='none'"></a>
+                    <a href="caballero html/c25.html"><img src="images/caballero/c25.jpeg" alt="Reloj 25" class="reloj-imagen" onerror="this.style.display='none'"></a>
                 </div>
-                <h3 class="nombre-reloj">Casio MTP-V002G-7B2</h3>
-                <p class="precio-reloj">MX$<ctrl3348></p>
-                <button class="ordenar-reloj">Ordenar</button>
+                <h3 class="nombre-reloj">Casio MTP-V300</h3>
+                <p class="precio-reloj">MX$ 1799<ctrl3348></p>
+                <button class="ordenar-reloj">Ordenar por WhatsApp </button>
             </div>
             <div class="producto">
                 <div class="imagen-placeholder">
-                    <a href="caballero.html#reloj3"><img src="images/caballero/c3.jpeg" alt="Reloj 3" class="reloj-imagen" onerror="this.style.display='none'"></a>
+                    <a href="caballero html/c28.html"><img src="images/caballero/c28.jpeg" alt="Reloj 28" class="reloj-imagen" onerror="this.style.display='none'"></a>
                 </div>
-                <h3 class="nombre-reloj">Casio LTP-VT01D-7BUDF</h3>
-                <p class="precio-reloj">MX$ ZZZZ</p>
-                <button class="ordenar-reloj">Ordenar</button>
+                <h3 class="nombre-reloj">Casio A158</h3>
+                <p class="precio-reloj">MX$ 740</p>
+                <button class="ordenar-reloj">Ordenar por WhatsApp</button>
             </div>
             <div class="producto">
                 <div class="imagen-placeholder">
-                    <a href="caballero.html#reloj4"><img src="images/caballero/c4.jpeg" alt="Reloj 4" class="reloj-imagen" onerror="this.style.display='none'"></a>
+                    <a href="caballero html/c32.html"><img src="images/caballero/c32.jpeg" alt="Reloj 32" class="reloj-imagen" onerror="this.style.display='none'"></a>
                 </div>
-                <h3 class="nombre-reloj">Casio MTP-V005l-1B</h3>
-                <p class="precio-reloj">MX$ WWWW</p>
-                <button class="ordenar-reloj">Ordenar</button>
+                <h3 class="nombre-reloj">Casio AMW880</h3>
+                <p class="precio-reloj">MX$ 2099</p>
+                <button class="ordenar-reloj">Ordenar por WhatsApp</button>
             </div>
         </div>
     </div>
@@ -84,7 +84,7 @@
                 </div>
                 <h3 class="nombre-reloj">Nombre de reloj</h3>
                 <p class="precio-reloj">MX$ XXXX</p>
-                <button class="ordenar-reloj">Ordenar</button>
+                <button class="ordenar-reloj">Ordenar por WhatsApp</button>
             </div>
             <div class="producto">
                 <div class="imagen-placeholder">
@@ -92,7 +92,7 @@
                 </div>
                 <h3 class="nombre-reloj">Nombre de reloj</h3>
                 <p class="precio-reloj">MX$ YYYY</p>
-                <button class="ordenar-reloj">Ordenar</button>
+                <button class="ordenar-reloj">Ordenar por WhatsApp</button>
             </div>
             <div class="producto">
                 <div class="imagen-placeholder">
@@ -100,7 +100,7 @@
                 </div>
                 <h3 class="nombre-reloj">Nombre de reloj</h3>
                 <p class="precio-reloj">MX$ ZZZZ</p>
-                <button class="ordenar-reloj">Ordenar</button>
+                <button class="ordenar-reloj">Ordenar por WhatsApp</button>
             </div>
             <div class="producto">
                 <div class="imagen-placeholder">
@@ -108,7 +108,7 @@
                 </div>
                 <h3 class="nombre-reloj">Nombre de reloj</h3>
                 <p class="precio-reloj">MX$ WWWW</p>
-                <button class="ordenar-reloj">Ordenar</button>
+                <button class="ordenar-reloj">Ordenar por WhatsApp</button>
             </div>
         </div>
     </div>
@@ -136,6 +136,27 @@
         <hr>
         <p>Copyright 2025 by Ge0sh</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener todos los botones de la clase "ordenar-reloj"
+            const botones = document.querySelectorAll('.ordenar-reloj');
+            
+            // Recorrer cada botón y asociarlo con la URL del reloj correspondiente
+            botones.forEach(function(boton) {
+                // Encontrar el enlace correspondiente al reloj
+                const enlace = boton.closest('.producto').querySelector('a');
+                
+                if (enlace) {
+                    // Asociar el enlace con el botón
+                    boton.addEventListener('click', function() {
+                        // Redirigir al enlace del reloj
+                        window.location.href = enlace.href;
+                    });
+                }
+            });
+        });
+    </script>
 
 <script src="js.js"></script> 
 </body>
