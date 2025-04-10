@@ -1,23 +1,10 @@
-import pandas as pd
-from jinja2 import Template
-import os
 
-# Leer Excel
-df = pd.read_excel("relojes.xlsx")
-df.columns = df.columns.str.strip().str.lower()
-
-# Carpeta de salida
-output_folder = "caballero html"
-os.makedirs(output_folder, exist_ok=True)
-
-# Plantilla tipo ecommerce
-html_template = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ nombre }} - Jay Store</title>
+    <title>Dúo línea económica - Jay Store</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,6 +170,7 @@ html_template = """
       <ul id="MenuItems">
         <li><a href="../caballero.html"><span>Catálogo caballero</span></a></li>
         <li><a href="../dama.html"><span>Catálogo dama</span></a></li>
+        <li><a href="../duo-economico.html"><span>Catálogo duo económico</span></a></li>
         <li><a href="../contacto.html"><span>Contacto</span></a></li>
       </ul>
     </nav>
@@ -190,13 +178,13 @@ html_template = """
     <main>
         <div class="producto-container">
             <div class="producto-img">
-                <img src="https://raw.githubusercontent.com/age0sh/website-jaystore/main/images/caballero/{{ imagen }}" alt="{{ nombre }}">
+                <img src="https://raw.githubusercontent.com/age0sh/website-jaystore/main/images/duo-economico/de17.jpeg" alt="Dúo línea económica">
             </div>
     <div class="producto-detalles">
-        <h1>{{ nombre }}</h1>
-        <p class="precio">{{ precio }}</p>
-        <p class="color"><strong>Color:</strong> {{ color }}</p>
-        <a class="btn-whatsapp" href="https://wa.me/5213751118891?text=Me%20interesa%20el%20reloj%20{{ nombre }}%20que%20cuesta%20{{ precio }}%20MXN.%20%0Ahttps://raw.githubusercontent.com/age0sh/website-jaystore/main/images/caballero/{{ imagen }}" target="_blank">
+        <h1>Dúo línea económica</h1>
+        <p class="precio">580</p>
+        <p class="color"><strong>Color:</strong> Azul, Plata</p>
+        <a class="btn-whatsapp" href="https://wa.me/5213751118891?text=Me%20interesa%20el%20reloj%20Dúo línea económica%20que%20cuesta%20580%20MXN.%20%0Ahttps://raw.githubusercontent.com/age0sh/website-jaystore/main/images/duo-economico/de17.jpeg" target="_blank">
             Pedir por WhatsApp
         </a>
     </div>
@@ -237,30 +225,3 @@ html_template = """
   </script>
 </body>
 </html>
-"""
-
-template = Template(html_template)
-
-# Genera los HTMLs
-for _, row in df.iterrows():
-    nombre = row['nombre']
-    precio = row['precio']
-    color = row['color']
-    id_reloj = row['id']
-    imagen = f"{id_reloj}.jpeg"
-    imagen_url = f"https://raw.githubusercontent.com/age0sh/website-jaystore/main/images/caballero/{imagen}"
-
-    html_content = template.render(
-        nombre=nombre,
-        precio=precio,
-        color=color,
-        imagen=imagen,
-        imagen_url=imagen_url,
-        id_reloj=id_reloj
-    )
-
-    output_path = os.path.join(output_folder, f"{id_reloj}.html")
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(html_content)
-
-print("✅ Diseño actualizado y HTMLs generados en: caballero html")

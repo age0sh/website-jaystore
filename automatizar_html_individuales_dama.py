@@ -183,6 +183,7 @@ html_template = """
       <ul id="MenuItems">
         <li><a href="../caballero.html"><span>Catálogo caballero</span></a></li>
         <li><a href="../dama.html"><span>Catálogo dama</span></a></li>
+        <li><a href="../duo-economico.html"><span>Catálogo duo económico</span></a></li>
         <li><a href="../contacto.html"><span>Contacto</span></a></li>
       </ul>
     </nav>
@@ -263,4 +264,4 @@ for _, row in df.iterrows():
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_content)
 
-print("✅ Diseño actualizado y HTMLs generados en: caballero html")
+print("✅ Diseño actualizado y HTMLs generados en: dama html")
